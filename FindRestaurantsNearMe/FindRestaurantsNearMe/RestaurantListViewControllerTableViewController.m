@@ -13,10 +13,12 @@
 @end
 
 @implementation RestaurantListViewControllerTableViewController
-
+NSMutableArray* restaurantsData;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    restaurantsData = [[NSMutableArray alloc]init];
     [self initLocation];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -43,6 +45,44 @@
     //stop location manager to save battely
     [locationManager stopUpdatingLocation];
     locationManager = nil;
+    //insert your gnavi api key here
+    NSString *apiKey = @"";
+    //range 1 = 300 meter around the location
+    NSString *range = @"2";
+    [self getGNaviData:apiKey :latitude :longitude :range];
+}
+
+-(void)getGNaviData:(NSString*)apiKey :(NSString*)latitude :(NSString*)longitude :(NSString*)range
+{
+    NSString *gNaviRequestStr = @"https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=VALUE0&latitude=VALUE1&longitude=VALUE2&range=VALUE3";
+    
+    gNaviRequestStr = [gNaviRequestStr stringByReplacingOccurrencesOfString:@"VALUE0"
+    withString:apiKey];
+    gNaviRequestStr = [gNaviRequestStr stringByReplacingOccurrencesOfString:@"VALUE1"
+                                         withString:latitude];
+    gNaviRequestStr = [gNaviRequestStr stringByReplacingOccurrencesOfString:@"VALUE2"
+    withString:longitude];
+    
+    gNaviRequestStr = [gNaviRequestStr stringByReplacingOccurrencesOfString:@"VALUE3"
+    withString:range];
+    
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+
+    NSURL *URL = [NSURL URLWithString:gNaviRequestStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        } else {
+            
+            NSLog(@"%@ %@", response, responseObject);
+            NSDictionary *responseDict = responseObject;
+            NSLog(@"dict %@", responseDict);
+        }
+    }];
+    [dataTask resume];
 }
 
 
@@ -50,23 +90,30 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return restaurantsData.count;//[restaurantsData count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
     // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    /*if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }*/
     
+    cell.textLabel.text = @"";
+    if (restaurantsData.count > 0)
+    {
+        cell.textLabel.text = restaurantsData[indexPath.row];
+    }
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
