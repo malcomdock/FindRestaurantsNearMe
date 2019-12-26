@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <CoreLocation/CoreLocation.h>
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RestaurantListViewControllerTableViewController : UITableViewController
+@interface RestaurantListViewControllerTableViewController : UITableViewController<CLLocationManagerDelegate> {
+    CLLocationManager *locationManager;
+}
 
 @end
 

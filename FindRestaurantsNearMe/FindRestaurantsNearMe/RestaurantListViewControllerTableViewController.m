@@ -16,13 +16,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self initLocation];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+-(void)initLocation
+{
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager startUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager*)manager
+      didUpdateLocations:(NSArray*)locations {
+    CLLocation* location = [locations lastObject];
+    NSString *latitude = [NSString stringWithFormat:@"%f", location.coordinate.latitude];
+    NSString *longitude = [NSString stringWithFormat:@"%f", location.coordinate.longitude];
+    NSLog(@"lati %@", latitude);
+    NSLog(@"long %@", longitude);
+    //stop location manager to save battely
+    [locationManager stopUpdatingLocation];
+    locationManager = nil;
+}
+
 
 #pragma mark - Table view data source
 

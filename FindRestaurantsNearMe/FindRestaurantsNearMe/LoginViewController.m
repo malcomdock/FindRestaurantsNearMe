@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-
+#import "RestaurantListViewControllerTableViewController.h"
 @interface LoginViewController()
 
 @end
@@ -47,6 +47,10 @@
 - (void)authorizationController:(ASAuthorizationController *)controller didCompleteWithAuthorization:(nonnull ASAuthorization *)authorization
 {
     NSLog(@"sign in complete");
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    RestaurantListViewControllerTableViewController *restaunrantViewController = [storyboard instantiateViewControllerWithIdentifier:@"RestaurantListViewControllerTableViewController"];
+    restaunrantViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:restaunrantViewController animated:YES completion:NULL];
 }
 
 - (void) authorizationController:(ASAuthorizationController *)controller didCompleteWithError:(NSError *)error
