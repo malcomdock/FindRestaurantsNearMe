@@ -21,9 +21,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>This application need to access your location to find restaurants near you.</string>
+	<string>このアプリケーションはユーザーの近くのレストランを検索する為に位置情報を利用します。</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>This application need to access your location to find restaurants near you.</string>
+	<string>このアプリケーションはユーザーの近くのレストランを検索する為に位置情報を利用します。</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -65,6 +65,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>privacy - location usage description</key>
-	<string>This application use your location to find restaurants near you.</string>
+	<string>このアプリケーションはユーザーの近くのレストランを検索する為に位置情報を利用します。</string>
 </dict>
 </plist>
