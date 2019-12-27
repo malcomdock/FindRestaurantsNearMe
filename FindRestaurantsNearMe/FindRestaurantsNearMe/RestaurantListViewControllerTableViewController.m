@@ -13,10 +13,12 @@
 @end
 
 @implementation RestaurantListViewControllerTableViewController
-NSMutableArray* restaurantsData;
+NSMutableArray* restaurantsNames;
+NSMutableArray* restaurantsUrls;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    restaurantsData = [[NSMutableArray alloc]init];
+    restaurantsNames = [[NSMutableArray alloc]init];
+    restaurantsUrls = [[NSMutableArray alloc]init];
     [self initLocation];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -32,7 +34,10 @@ NSMutableArray* restaurantsData;
     locationManager.delegate = self;
     locationManager.distanceFilter = kCLDistanceFilterNone;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager requestWhenInUseAuthorization];
+    [locationManager startMonitoringSignificantLocationChanges];
     [locationManager startUpdatingLocation];
+    //NSLog(@"init location");
 }
 
 - (void)locationManager:(CLLocationManager*)manager
@@ -40,21 +45,30 @@ NSMutableArray* restaurantsData;
     CLLocation* location = [locations lastObject];
     NSString *latitude = [NSString stringWithFormat:@"%f", location.coordinate.latitude];
     NSString *longitude = [NSString stringWithFormat:@"%f", location.coordinate.longitude];
-    NSLog(@"lati %@", latitude);
-    NSLog(@"long %@", longitude);
+    //NSLog(@"lati %@", latitude);
+    //NSLog(@"long %@", longitude);
     //stop location manager to save battely
     [locationManager stopUpdatingLocation];
     locationManager = nil;
-    //insert your gnavi api key here
-    NSString *apiKey = @"";
-    //range 1 = 300 meter around the location
-    NSString *range = @"2";
-    [self getGNaviData:apiKey :latitude :longitude :range];
+    [self InvokeGNaviAPIRequest:latitude :longitude];
 }
 
--(void)getGNaviData:(NSString*)apiKey :(NSString*)latitude :(NSString*)longitude :(NSString*)range
+-(void)InvokeGNaviAPIRequest:(NSString*)latitude :(NSString*)longitude
 {
-    NSString *gNaviRequestStr = @"https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=VALUE0&latitude=VALUE1&longitude=VALUE2&range=VALUE3";
+    //insert your gnavi api key here
+    NSString *apiKey = @"";
+    //range 2 = 500 meter around the location
+    NSString *range = @"2";
+    //Restaurants name order
+    NSString *sort = @"1";
+    //100 is limit
+    NSString *hitPerPage = @"100";
+    [self getGNaviData:apiKey :latitude :longitude :range :sort :hitPerPage];
+}
+
+-(void)getGNaviData:(NSString*)apiKey :(NSString*)latitude :(NSString*)longitude :(NSString*)range :(NSString*)sort :(NSString*)hitPerPage
+{
+    NSString *gNaviRequestStr = @"https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=VALUE0&latitude=VALUE1&longitude=VALUE2&range=VALUE3&sort=VALUE4&hit_per_page=VALUE5";
     
     gNaviRequestStr = [gNaviRequestStr stringByReplacingOccurrencesOfString:@"VALUE0"
     withString:apiKey];
@@ -62,10 +76,14 @@ NSMutableArray* restaurantsData;
                                          withString:latitude];
     gNaviRequestStr = [gNaviRequestStr stringByReplacingOccurrencesOfString:@"VALUE2"
     withString:longitude];
-    
     gNaviRequestStr = [gNaviRequestStr stringByReplacingOccurrencesOfString:@"VALUE3"
     withString:range];
+    gNaviRequestStr = [gNaviRequestStr stringByReplacingOccurrencesOfString:@"VALUE4"
+    withString:sort];
+    gNaviRequestStr = [gNaviRequestStr stringByReplacingOccurrencesOfString:@"VALUE5"
+    withString:hitPerPage];
     
+    //NSLog(@"api,%@",gNaviRequestStr);
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
 
@@ -76,45 +94,86 @@ NSMutableArray* restaurantsData;
         if (error) {
             NSLog(@"Error: %@", error);
         } else {
-            
-            NSLog(@"%@ %@", response, responseObject);
             NSDictionary *responseDict = responseObject;
-            NSLog(@"dict %@", responseDict);
+            restaurantsNames = [responseDict valueForKeyPath:@"rest.name"];
+            restaurantsUrls = [responseDict valueForKeyPath:@"rest.url"];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+                [self.tableView setNeedsDisplay];
+            });
         }
     }];
     [dataTask resume];
 }
 
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
+//#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return restaurantsData.count;//[restaurantsData count];
+//#warning Incomplete implementation, return the number of rows
+    return restaurantsNames.count;
 }
+
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     // Configure the cell...
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    /*if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    }*/
-    
     cell.textLabel.text = @"";
-    if (restaurantsData.count > 0)
+    if (restaurantsNames.count > 0)
     {
-        cell.textLabel.text = restaurantsData[indexPath.row];
+        cell.textLabel.text = restaurantsNames[indexPath.row];
     }
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSInteger row = [indexPath row];
+    NSString *urlString = restaurantsUrls[row];
+    if([urlString length] > 0 && [urlString rangeOfString:@"http"].location != NSNotFound)
+    {
+        [self OpenRestaurantPageWithSafari:urlString];
+    }
+    else
+    {
+        [self ShowAlertForNoRestaurantsURL];
+    }
+    
+}
 
+-(void)OpenRestaurantPageWithSafari :(NSString*)urlString
+{
+    NSURL *url = [NSURL URLWithString:urlString];
+    SFSafariViewController *safari = [[SFSafariViewController alloc] initWithURL:url];
+    safari.delegate = self;
+    [self presentViewController:safari animated:YES completion:nil];
+}
+
+-(void)ShowAlertForNoRestaurantsURL
+{
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:@"URLエラー"
+                                 message:@"お店のURLが見つかりませんでした。"
+                                 preferredStyle:UIAlertControllerStyleAlert];
+
+    UIAlertAction* okButton = [UIAlertAction
+                                actionWithTitle:@"OK"
+                                style:UIAlertActionStyleDefault
+                                handler:nil];
+    
+    [alert addAction:okButton];
+
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller {
+    [self dismissViewControllerAnimated:true completion:nil];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

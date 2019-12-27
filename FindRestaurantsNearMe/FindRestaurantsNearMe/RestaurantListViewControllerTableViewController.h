@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <SafariServices/SafariServices.h>
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RestaurantListViewControllerTableViewController : UITableViewController<CLLocationManagerDelegate> {
+@interface RestaurantListViewControllerTableViewController : UITableViewController<CLLocationManagerDelegate,SFSafariViewControllerDelegate> {
     CLLocationManager *locationManager;
 }
 

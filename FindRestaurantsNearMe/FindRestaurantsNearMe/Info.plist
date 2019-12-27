@@ -20,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This application need to access your location to find restaurants near you.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This application need to access your location to find restaurants near you.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -60,5 +64,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>privacy - location usage description</key>
+	<string>This application use your location to find restaurants near you.</string>
 </dict>
 </plist>

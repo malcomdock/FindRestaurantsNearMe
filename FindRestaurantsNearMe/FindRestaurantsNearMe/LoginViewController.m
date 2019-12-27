@@ -46,7 +46,6 @@
 
 - (void)authorizationController:(ASAuthorizationController *)controller didCompleteWithAuthorization:(nonnull ASAuthorization *)authorization
 {
-    NSLog(@"sign in complete");
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     RestaurantListViewControllerTableViewController *restaunrantViewController = [storyboard instantiateViewControllerWithIdentifier:@"RestaurantListViewControllerTableViewController"];
     restaunrantViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
