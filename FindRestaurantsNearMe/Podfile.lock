@@ -14,17 +14,24 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - Keys (1.0.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - Keys (from `Pods/CocoaPodsKeys`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
 
+EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
+
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
 
-PODFILE CHECKSUM: 4b81ba13385fd6c06ecbb9038a6ec39adcbdb43d
+PODFILE CHECKSUM: e5537bc1233d0fe9989a749723f203f8740f2a19
 
 COCOAPODS: 1.8.4
