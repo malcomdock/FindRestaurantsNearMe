@@ -15,7 +15,7 @@
 
 -(void)InvokeGNaviAPIRequest:(NSString*)latitude :(NSString*)longitude
 {
-    #warning insert your gnavi api key here or set it from cocoa pod install prompt
+    #warning insert your gurunavi api key here or set it from cocoa pod install prompt
     FindRestaurantsNearMeKeys *keys = [[FindRestaurantsNearMeKeys alloc] init];
     NSString *apiKey = keys.apiKey;
     //range 2 = 500 meter around the location
