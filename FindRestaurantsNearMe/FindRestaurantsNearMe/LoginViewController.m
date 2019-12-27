@@ -22,6 +22,7 @@
 }
 
 - (void)buildUI {
+    self.navigationItem.title = @"ログイン画面";
     ASAuthorizationAppleIDButton *loginButton = [ASAuthorizationAppleIDButton new];
     loginButton.frame =  CGRectMake(.0, .0, CGRectGetWidth(self.view.frame) - 40.0, 100.0);
     CGPoint origin = CGPointMake(20.0, CGRectGetMidY(self.view.frame));
@@ -48,8 +49,7 @@
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     RestaurantListViewControllerTableViewController *restaunrantViewController = [storyboard instantiateViewControllerWithIdentifier:@"RestaurantListViewControllerTableViewController"];
-    restaunrantViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    [self presentViewController:restaunrantViewController animated:YES completion:NULL];
+    [[self navigationController] pushViewController:restaunrantViewController animated:true];
 }
 
 - (void) authorizationController:(ASAuthorizationController *)controller didCompleteWithError:(NSError *)error

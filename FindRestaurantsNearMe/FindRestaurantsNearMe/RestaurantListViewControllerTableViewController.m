@@ -17,6 +17,7 @@ NSMutableArray* restaurantsNames;
 NSMutableArray* restaurantsUrls;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"近くのレストラン一覧画面";
     restaurantsNames = [[NSMutableArray alloc]init];
     restaurantsUrls = [[NSMutableArray alloc]init];
     [self initLocation];
@@ -135,7 +136,9 @@ NSMutableArray* restaurantsUrls;
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSInteger row = [indexPath row];
     NSString *urlString = restaurantsUrls[row];
-    if([urlString length] > 0 && [urlString rangeOfString:@"http"].location != NSNotFound)
+    //deal strings like "","error"
+    int minimumLength = 6;
+    if([urlString length] > minimumLength && [urlString rangeOfString:@"http"].location != NSNotFound)
     {
         [self OpenRestaurantPageWithSafari:urlString];
     }
@@ -157,8 +160,8 @@ NSMutableArray* restaurantsUrls;
 -(void)ShowAlertForNoRestaurantsURL
 {
     UIAlertController * alert = [UIAlertController
-                                 alertControllerWithTitle:@"URLエラー"
-                                 message:@"お店のURLが見つかりませんでした。"
+                                 alertControllerWithTitle:@"ページエラー"
+                                 message:@"お店のページ情報がありません。"
                                  preferredStyle:UIAlertControllerStyleAlert];
 
     UIAlertAction* okButton = [UIAlertAction
