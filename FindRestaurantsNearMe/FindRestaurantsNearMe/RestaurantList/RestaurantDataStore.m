@@ -14,7 +14,7 @@
 
 -(void)InvokeGNaviAPIRequest:(NSString*)latitude :(NSString*)longitude
 {
-    //insert your gnavi api key here
+    #warning insert your gnavi api key here
     NSString *apiKey = @"";
     //range 2 = 500 meter around the location
     NSString *range = @"2";

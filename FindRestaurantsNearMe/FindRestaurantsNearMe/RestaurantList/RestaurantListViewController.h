@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
-#import <CoreLocation/CoreLocation.h>
 #import <SafariServices/SafariServices.h>
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RestaurantListViewController : UITableViewController<CLLocationManagerDelegate,SFSafariViewControllerDelegate> {
-    CLLocationManager *locationManager;
+@interface RestaurantListViewController : UITableViewController<SFSafariViewControllerDelegate> {
+    
 }
 -(void)ReloadView;
 -(void)InvokeDataRequest:(NSString*)latitude :(NSString*)longitude;
