@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface RestaurantListViewController : UITableViewController<CLLocationManagerDelegate,SFSafariViewControllerDelegate> {
     CLLocationManager *locationManager;
 }
-
+-(void)ReloadView;
 @end
 
 NS_ASSUME_NONNULL_END
