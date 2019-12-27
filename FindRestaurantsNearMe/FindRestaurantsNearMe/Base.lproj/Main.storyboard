@@ -39,10 +39,10 @@
             </objects>
             <point key="canvasLocation" x="133" y="139"/>
         </scene>
-        <!--Restaurant List View Controller Table View Controller-->
+        <!--Restaurant List View Controller-->
         <scene sceneID="UXs-CH-zTs">
             <objects>
-                <tableViewController storyboardIdentifier="RestaurantListViewControllerTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ixB-BU-OAl" customClass="RestaurantListViewControllerTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="RestaurantListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ixB-BU-OAl" customClass="RestaurantListViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IFj-d8-s2n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

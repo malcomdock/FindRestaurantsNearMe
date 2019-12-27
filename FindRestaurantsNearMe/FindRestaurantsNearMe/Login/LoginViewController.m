@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-#import "RestaurantListViewControllerTableViewController.h"
+#import "RestaurantListViewController.h"
 @interface LoginViewController()
 
 @end
@@ -48,7 +48,7 @@
 - (void)authorizationController:(ASAuthorizationController *)controller didCompleteWithAuthorization:(nonnull ASAuthorization *)authorization
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    RestaurantListViewControllerTableViewController *restaunrantViewController = [storyboard instantiateViewControllerWithIdentifier:@"RestaurantListViewControllerTableViewController"];
+    RestaurantListViewController *restaunrantViewController = [storyboard instantiateViewControllerWithIdentifier:@"RestaurantListViewController"];
     [[self navigationController] pushViewController:restaunrantViewController animated:true];
 }
 

@@ -1,14 +1,14 @@
 //
-//  RestaurantListViewControllerTableViewController.m
+//  RestaurantListViewController.m
 //  FindRestaurantsNearMe
 //
 //  Created by Yasuo Nakamura on 2019/12/26.
 //  Copyright © 2019 Yasuo Nakamura. All rights reserved.
 //
 
-#import "RestaurantListViewControllerTableViewController.h"
+#import "RestaurantListViewController.h"
 #import <AFNetworking/AFNetworking.h>
-@interface RestaurantListViewControllerTableViewController ()
+@interface RestaurantListViewController ()
 
 @end
 

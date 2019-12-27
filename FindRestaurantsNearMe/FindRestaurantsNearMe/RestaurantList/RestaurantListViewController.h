@@ -1,5 +1,5 @@
 //
-//  RestaurantListViewControllerTableViewController.h
+//  RestaurantListViewController.h
 //  FindRestaurantsNearMe
 //
 //  Created by Yasuo Nakamura on 2019/12/26.
@@ -11,7 +11,7 @@
 #import <SafariServices/SafariServices.h>
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RestaurantListViewControllerTableViewController : UITableViewController<CLLocationManagerDelegate,SFSafariViewControllerDelegate> {
+@interface RestaurantListViewController : UITableViewController<CLLocationManagerDelegate,SFSafariViewControllerDelegate> {
     CLLocationManager *locationManager;
 }
 
