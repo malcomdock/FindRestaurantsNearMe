@@ -10,8 +10,10 @@
 #import <AFNetworking/AFNetworking.h>
 #import "RestaurantDataStore.h"
 #import "RestaurantsDataRepository.h"
-@interface RestaurantListViewController () <RestaurantDataStoreDelegate>
+#import "LocationDetector.h"
+@interface RestaurantListViewController () <RestaurantDataStoreDelegate,LocationDetectorDelegate>
 @property (strong, nonatomic) RestaurantDataStore *restaurantDataStore;
+@property (strong, nonatomic) LocationDetector *locationDetector;
 @end
 
 @implementation RestaurantListViewController
@@ -24,7 +26,9 @@
     self.navigationItem.title = @"近くのレストラン一覧画面";
     //restaurantsNames = [[NSMutableArray alloc]init];
     //restaurantsUrls = [[NSMutableArray alloc]init];
-    [self initLocation];
+    self.locationDetector = [[LocationDetector alloc] init];
+    self.locationDetector.delegate = self;
+    [self.locationDetector InitLocation];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -33,42 +37,19 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
--(void)initLocation
-{
-    locationManager = [[CLLocationManager alloc] init];
-    locationManager.delegate = self;
-    locationManager.distanceFilter = kCLDistanceFilterNone;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    [locationManager requestWhenInUseAuthorization];
-    [locationManager startMonitoringSignificantLocationChanges];
-    [locationManager startUpdatingLocation];
-    //NSLog(@"init location");
-}
-
-- (void)locationManager:(CLLocationManager*)manager
-      didUpdateLocations:(NSArray*)locations {
-    CLLocation* location = [locations lastObject];
-    NSString *latitude = [NSString stringWithFormat:@"%f", location.coordinate.latitude];
-    NSString *longitude = [NSString stringWithFormat:@"%f", location.coordinate.longitude];
-    //NSLog(@"lati %@", latitude);
-    //NSLog(@"long %@", longitude);
-    //stop location manager to save battely
-    [locationManager stopUpdatingLocation];
-    locationManager = nil;
-    
-    self.restaurantDataStore = [[RestaurantDataStore alloc] init];
-    self.restaurantDataStore.delegate = self;
-    [self.restaurantDataStore InvokeGNaviAPIRequest:latitude :longitude];
-    
-    //[self InvokeGNaviAPIRequest:latitude :longitude];
-}
-
 -(void)ReloadView
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.tableView reloadData];
         [self.tableView setNeedsDisplay];
     });
+}
+
+-(void)InvokeDataRequest:(NSString*)latitude :(NSString*)longitude;
+{
+    self.restaurantDataStore = [[RestaurantDataStore alloc] init];
+    self.restaurantDataStore.delegate = self;
+    [self.restaurantDataStore InvokeGNaviAPIRequest:latitude :longitude];
 }
 
 #pragma mark - Table view data source

@@ -15,7 +15,7 @@
 -(void)InvokeGNaviAPIRequest:(NSString*)latitude :(NSString*)longitude
 {
     //insert your gnavi api key here
-    NSString *apiKey = @"29769d4371d3b7709722842ae0b8fb67";
+    NSString *apiKey = @"";
     //range 2 = 500 meter around the location
     NSString *range = @"2";
     //Restaurants name order
