@@ -12,7 +12,7 @@
 
 @end
 
-@implementation RestaurantListViewControllerTableViewController
+@implementation RestaurantListViewController
 NSMutableArray* restaurantsNames;
 NSMutableArray* restaurantsUrls;
 - (void)viewDidLoad {
