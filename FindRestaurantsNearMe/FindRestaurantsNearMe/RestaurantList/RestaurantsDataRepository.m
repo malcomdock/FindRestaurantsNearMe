@@ -28,23 +28,13 @@ NSMutableArray* restaurantsUrls;
     return self;
 }
 
-- (NSMutableArray*)GetRestaurantNames
+- (NSMutableArray*)getRestaurantNames
 {
     return restaurantsNames;
 }
-- (NSMutableArray*)GetRestaurantUrls
+- (NSMutableArray*)getRestaurantUrls
 {
     return restaurantsUrls;
-}
-
--(void)UpdateRestaurantNames:(NSArray*)source
-{
-    restaurantsNames = [source mutableCopy];
-}
-
--(void)UpdateRestaurantUrls:(NSArray*)source
-{
-    restaurantsUrls = [source mutableCopy];
 }
 
 @end

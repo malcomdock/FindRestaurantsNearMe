@@ -13,10 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface RestaurantsDataRepository : NSObject
 + (id)sharedManager;
 - (id)init;
-- (NSMutableArray*)GetRestaurantNames;
-- (NSMutableArray*)GetRestaurantUrls;
--(void)UpdateRestaurantNames:(NSArray*)source;
--(void)UpdateRestaurantUrls:(NSArray*)source;
+- (NSMutableArray*)getRestaurantNames;
+- (NSMutableArray*)getRestaurantUrls;
 @end
 
 NS_ASSUME_NONNULL_END
