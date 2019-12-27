@@ -7,5 +7,6 @@ You can get the key by creating the account at the website below.
 Please follow their api rules.
 https://api.gnavi.co.jp/api/
 
+レストラン検索API提供元　グルメ情報検索サイト　ぐるなび
 
 
