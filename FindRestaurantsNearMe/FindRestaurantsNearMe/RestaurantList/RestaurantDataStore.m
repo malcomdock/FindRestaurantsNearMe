@@ -9,15 +9,17 @@
 #import "RestaurantDataStore.h"
 #import <AFNetworking/AFNetworking.h>
 #import "RestaurantsDataRepository.h"
-#import "FindRestaurantsNearMeKeys.h"
+//#import "FindRestaurantsNearMeKeys.h"
 @implementation RestaurantDataStore
 
 
 -(void)InvokeGNaviAPIRequest:(NSString*)latitude :(NSString*)longitude
 {
     #warning insert your gurunavi api key here or set it from cocoa pod install prompt
-    FindRestaurantsNearMeKeys *keys = [[FindRestaurantsNearMeKeys alloc] init];
-    NSString *apiKey = keys.apiKey;
+    NSString *apiKey = @"";
+    //FindRestaurantsNearMeKeys *keys = [[FindRestaurantsNearMeKeys alloc] init];
+    //NSString *apiKey = keys.apiKey;
+    
     //range 2 = 500 meter around the location
     NSString *range = @"2";
     //Restaurants name order

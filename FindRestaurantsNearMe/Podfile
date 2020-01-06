@@ -10,12 +10,6 @@ target 'FindRestaurantsNearMe' do
   pod 'AFNetworking', '~> 3.0'
 
   # Pods for FindRestaurantsNearMe
-  plugin 'cocoapods-keys', {
-  	:target => "FindRestaurantsNearMe",
-    :project => "FindRestaurantsNearMe",
-    :keys => [
-      "apiKey"
-      ]}
 
   target 'FindRestaurantsNearMeTests' do
     inherit! :search_paths
