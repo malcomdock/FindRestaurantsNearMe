@@ -1,0 +1,806 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F970E300D9E4F85197C4C58 /* Pods_FindRestaurantsNearMe_FindRestaurantsNearMeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3944013A53B7910369AFF642 /* Pods_FindRestaurantsNearMe_FindRestaurantsNearMeUITests.framework */; };
+		A918CFC523B4581000633449 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A918CFC423B4581000633449 /* AuthenticationServices.framework */; };
+		A926F11B23B5B08B00551A09 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A926F11A23B5B08B00551A09 /* SafariServices.framework */; };
+		A983499C23B5E802007FB634 /* RestaurantsDataRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = A983499B23B5E802007FB634 /* RestaurantsDataRepository.m */; };
+		A983499F23B5E831007FB634 /* RestaurantDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A983499E23B5E831007FB634 /* RestaurantDataStore.m */; };
+		A98349A123B5E921007FB634 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A983499523B5E76A007FB634 /* LoginViewController.m */; };
+		A99F029923B5FB2000FCCD30 /* LocationDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = A99F029823B5FB2000FCCD30 /* LocationDetector.m */; };
+		A9C33AB323B44F72000DF09F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C33AB223B44F72000DF09F /* AppDelegate.m */; };
+		A9C33AB623B44F72000DF09F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C33AB523B44F72000DF09F /* SceneDelegate.m */; };
+		A9C33ABC23B44F72000DF09F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C33ABA23B44F72000DF09F /* Main.storyboard */; };
+		A9C33ABE23B44F74000DF09F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9C33ABD23B44F74000DF09F /* Assets.xcassets */; };
+		A9C33AC123B44F74000DF09F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C33ABF23B44F74000DF09F /* LaunchScreen.storyboard */; };
+		A9C33AC423B44F74000DF09F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C33AC323B44F74000DF09F /* main.m */; };
+		A9C33ACE23B44F74000DF09F /* FindRestaurantsNearMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C33ACD23B44F74000DF09F /* FindRestaurantsNearMeTests.m */; };
+		A9C33AD923B44F74000DF09F /* FindRestaurantsNearMeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C33AD823B44F74000DF09F /* FindRestaurantsNearMeUITests.m */; };
+		A9C979D823B48CFF0035D1B1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C979D723B48CFF0035D1B1 /* CoreLocation.framework */; };
+		A9DB25BB23B5EAD300A8303E /* RestaurantListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A983499223B5E76A007FB634 /* RestaurantListViewController.m */; };
+		B8483E145004BECEA52893E1 /* Pods_FindRestaurantsNearMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C6A1D13E67020EC987A64B /* Pods_FindRestaurantsNearMe.framework */; };
+		E53B66A4D929CAFD5CCBD0FC /* Pods_FindRestaurantsNearMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DBF1829CD0B9B1269AC1BF /* Pods_FindRestaurantsNearMeTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A9C33ACA23B44F74000DF09F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9C33AA623B44F72000DF09F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9C33AAD23B44F72000DF09F;
+			remoteInfo = FindRestaurantsNearMe;
+		};
+		A9C33AD523B44F74000DF09F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9C33AA623B44F72000DF09F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9C33AAD23B44F72000DF09F;
+			remoteInfo = FindRestaurantsNearMe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		11801753892A5C1987C1EB44 /* Pods-FindRestaurantsNearMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindRestaurantsNearMeTests.debug.xcconfig"; path = "Target Support Files/Pods-FindRestaurantsNearMeTests/Pods-FindRestaurantsNearMeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3944013A53B7910369AFF642 /* Pods_FindRestaurantsNearMe_FindRestaurantsNearMeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindRestaurantsNearMe_FindRestaurantsNearMeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42C6A1D13E67020EC987A64B /* Pods_FindRestaurantsNearMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindRestaurantsNearMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F8D8C9364DC595EEE38A25B /* Pods-FindRestaurantsNearMe-FindRestaurantsNearMeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindRestaurantsNearMe-FindRestaurantsNearMeUITests.release.xcconfig"; path = "Target Support Files/Pods-FindRestaurantsNearMe-FindRestaurantsNearMeUITests/Pods-FindRestaurantsNearMe-FindRestaurantsNearMeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		96C817D05573560986E2BAD7 /* Pods-FindRestaurantsNearMe-FindRestaurantsNearMeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindRestaurantsNearMe-FindRestaurantsNearMeUITests.debug.xcconfig"; path = "Target Support Files/Pods-FindRestaurantsNearMe-FindRestaurantsNearMeUITests/Pods-FindRestaurantsNearMe-FindRestaurantsNearMeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A918CFC223B4556D00633449 /* FindRestaurantsNearMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FindRestaurantsNearMe.entitlements; sourceTree = "<group>"; };
+		A918CFC423B4581000633449 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		A926F11A23B5B08B00551A09 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		A933F19E23D5AFFD000CF95B /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		A983499223B5E76A007FB634 /* RestaurantListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantListViewController.m; sourceTree = "<group>"; };
+		A983499323B5E76A007FB634 /* RestaurantListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantListViewController.h; sourceTree = "<group>"; };
+		A983499423B5E76A007FB634 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		A983499523B5E76A007FB634 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		A983499A23B5E802007FB634 /* RestaurantsDataRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestaurantsDataRepository.h; sourceTree = "<group>"; };
+		A983499B23B5E802007FB634 /* RestaurantsDataRepository.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestaurantsDataRepository.m; sourceTree = "<group>"; };
+		A983499D23B5E831007FB634 /* RestaurantDataStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestaurantDataStore.h; sourceTree = "<group>"; };
+		A983499E23B5E831007FB634 /* RestaurantDataStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestaurantDataStore.m; sourceTree = "<group>"; };
+		A99F029723B5FB2000FCCD30 /* LocationDetector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationDetector.h; sourceTree = "<group>"; };
+		A99F029823B5FB2000FCCD30 /* LocationDetector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationDetector.m; sourceTree = "<group>"; };
+		A9C33AAE23B44F72000DF09F /* FindRestaurantsNearMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindRestaurantsNearMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9C33AB123B44F72000DF09F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A9C33AB223B44F72000DF09F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A9C33AB423B44F72000DF09F /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		A9C33AB523B44F72000DF09F /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		A9C33ABB23B44F72000DF09F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A9C33ABD23B44F74000DF09F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A9C33AC023B44F74000DF09F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A9C33AC223B44F74000DF09F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9C33AC323B44F74000DF09F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A9C33AC923B44F74000DF09F /* FindRestaurantsNearMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindRestaurantsNearMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9C33ACD23B44F74000DF09F /* FindRestaurantsNearMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindRestaurantsNearMeTests.m; sourceTree = "<group>"; };
+		A9C33ACF23B44F74000DF09F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9C33AD423B44F74000DF09F /* FindRestaurantsNearMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindRestaurantsNearMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9C33AD823B44F74000DF09F /* FindRestaurantsNearMeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindRestaurantsNearMeUITests.m; sourceTree = "<group>"; };
+		A9C33ADA23B44F74000DF09F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9C979D723B48CFF0035D1B1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B0A6C593A27CAFB7130BF812 /* Pods-FindRestaurantsNearMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindRestaurantsNearMe.debug.xcconfig"; path = "Target Support Files/Pods-FindRestaurantsNearMe/Pods-FindRestaurantsNearMe.debug.xcconfig"; sourceTree = "<group>"; };
+		B7F49AC090BD45249E03B308 /* Pods-FindRestaurantsNearMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindRestaurantsNearMeTests.release.xcconfig"; path = "Target Support Files/Pods-FindRestaurantsNearMeTests/Pods-FindRestaurantsNearMeTests.release.xcconfig"; sourceTree = "<group>"; };
+		D12987FAC93E6BEC0D8F52B0 /* Pods-FindRestaurantsNearMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindRestaurantsNearMe.release.xcconfig"; path = "Target Support Files/Pods-FindRestaurantsNearMe/Pods-FindRestaurantsNearMe.release.xcconfig"; sourceTree = "<group>"; };
+		D2DBF1829CD0B9B1269AC1BF /* Pods_FindRestaurantsNearMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindRestaurantsNearMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A9C33AAB23B44F72000DF09F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A926F11B23B5B08B00551A09 /* SafariServices.framework in Frameworks */,
+				A9C979D823B48CFF0035D1B1 /* CoreLocation.framework in Frameworks */,
+				A918CFC523B4581000633449 /* AuthenticationServices.framework in Frameworks */,
+				B8483E145004BECEA52893E1 /* Pods_FindRestaurantsNearMe.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9C33AC623B44F74000DF09F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E53B66A4D929CAFD5CCBD0FC /* Pods_FindRestaurantsNearMeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9C33AD123B44F74000DF09F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F970E300D9E4F85197C4C58 /* Pods_FindRestaurantsNearMe_FindRestaurantsNearMeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B7869518F770D00270AA3A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0A6C593A27CAFB7130BF812 /* Pods-FindRestaurantsNearMe.debug.xcconfig */,
+				D12987FAC93E6BEC0D8F52B0 /* Pods-FindRestaurantsNearMe.release.xcconfig */,
+				96C817D05573560986E2BAD7 /* Pods-FindRestaurantsNearMe-FindRestaurantsNearMeUITests.debug.xcconfig */,
+				6F8D8C9364DC595EEE38A25B /* Pods-FindRestaurantsNearMe-FindRestaurantsNearMeUITests.release.xcconfig */,
+				11801753892A5C1987C1EB44 /* Pods-FindRestaurantsNearMeTests.debug.xcconfig */,
+				B7F49AC090BD45249E03B308 /* Pods-FindRestaurantsNearMeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A918CFC323B4581000633449 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A933F19E23D5AFFD000CF95B /* AddressBookUI.framework */,
+				A926F11A23B5B08B00551A09 /* SafariServices.framework */,
+				A9C979D723B48CFF0035D1B1 /* CoreLocation.framework */,
+				A918CFC423B4581000633449 /* AuthenticationServices.framework */,
+				42C6A1D13E67020EC987A64B /* Pods_FindRestaurantsNearMe.framework */,
+				3944013A53B7910369AFF642 /* Pods_FindRestaurantsNearMe_FindRestaurantsNearMeUITests.framework */,
+				D2DBF1829CD0B9B1269AC1BF /* Pods_FindRestaurantsNearMeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A983499823B5E77B007FB634 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A983499423B5E76A007FB634 /* LoginViewController.h */,
+				A983499523B5E76A007FB634 /* LoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A983499923B5E78D007FB634 /* RestaurantList */ = {
+			isa = PBXGroup;
+			children = (
+				A983499323B5E76A007FB634 /* RestaurantListViewController.h */,
+				A983499223B5E76A007FB634 /* RestaurantListViewController.m */,
+				A983499A23B5E802007FB634 /* RestaurantsDataRepository.h */,
+				A983499B23B5E802007FB634 /* RestaurantsDataRepository.m */,
+				A983499D23B5E831007FB634 /* RestaurantDataStore.h */,
+				A983499E23B5E831007FB634 /* RestaurantDataStore.m */,
+				A99F029723B5FB2000FCCD30 /* LocationDetector.h */,
+				A99F029823B5FB2000FCCD30 /* LocationDetector.m */,
+			);
+			path = RestaurantList;
+			sourceTree = "<group>";
+		};
+		A9C33AA523B44F72000DF09F = {
+			isa = PBXGroup;
+			children = (
+				A9C33AB023B44F72000DF09F /* FindRestaurantsNearMe */,
+				A9C33ACC23B44F74000DF09F /* FindRestaurantsNearMeTests */,
+				A9C33AD723B44F74000DF09F /* FindRestaurantsNearMeUITests */,
+				A9C33AAF23B44F72000DF09F /* Products */,
+				A918CFC323B4581000633449 /* Frameworks */,
+				1B7869518F770D00270AA3A9 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		A9C33AAF23B44F72000DF09F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9C33AAE23B44F72000DF09F /* FindRestaurantsNearMe.app */,
+				A9C33AC923B44F74000DF09F /* FindRestaurantsNearMeTests.xctest */,
+				A9C33AD423B44F74000DF09F /* FindRestaurantsNearMeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9C33AB023B44F72000DF09F /* FindRestaurantsNearMe */ = {
+			isa = PBXGroup;
+			children = (
+				A918CFC223B4556D00633449 /* FindRestaurantsNearMe.entitlements */,
+				A9C33AB123B44F72000DF09F /* AppDelegate.h */,
+				A9C33AB223B44F72000DF09F /* AppDelegate.m */,
+				A9C33AB423B44F72000DF09F /* SceneDelegate.h */,
+				A9C33AB523B44F72000DF09F /* SceneDelegate.m */,
+				A983499823B5E77B007FB634 /* Login */,
+				A983499923B5E78D007FB634 /* RestaurantList */,
+				A9C33ABA23B44F72000DF09F /* Main.storyboard */,
+				A9C33ABD23B44F74000DF09F /* Assets.xcassets */,
+				A9C33ABF23B44F74000DF09F /* LaunchScreen.storyboard */,
+				A9C33AC223B44F74000DF09F /* Info.plist */,
+				A9C33AC323B44F74000DF09F /* main.m */,
+			);
+			path = FindRestaurantsNearMe;
+			sourceTree = "<group>";
+		};
+		A9C33ACC23B44F74000DF09F /* FindRestaurantsNearMeTests */ = {
+			isa = PBXGroup;
+			children = (
+				A9C33ACD23B44F74000DF09F /* FindRestaurantsNearMeTests.m */,
+				A9C33ACF23B44F74000DF09F /* Info.plist */,
+			);
+			path = FindRestaurantsNearMeTests;
+			sourceTree = "<group>";
+		};
+		A9C33AD723B44F74000DF09F /* FindRestaurantsNearMeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A9C33AD823B44F74000DF09F /* FindRestaurantsNearMeUITests.m */,
+				A9C33ADA23B44F74000DF09F /* Info.plist */,
+			);
+			path = FindRestaurantsNearMeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A9C33AAD23B44F72000DF09F /* FindRestaurantsNearMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9C33ADD23B44F74000DF09F /* Build configuration list for PBXNativeTarget "FindRestaurantsNearMe" */;
+			buildPhases = (
+				0665619A69C84BF44E83DC31 /* [CP] Check Pods Manifest.lock */,
+				A9C33AAA23B44F72000DF09F /* Sources */,
+				A9C33AAB23B44F72000DF09F /* Frameworks */,
+				A9C33AAC23B44F72000DF09F /* Resources */,
+				F5110E266A36CFD4F05EB3E8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FindRestaurantsNearMe;
+			productName = FindRestaurantsNearMe;
+			productReference = A9C33AAE23B44F72000DF09F /* FindRestaurantsNearMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A9C33AC823B44F74000DF09F /* FindRestaurantsNearMeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9C33AE023B44F74000DF09F /* Build configuration list for PBXNativeTarget "FindRestaurantsNearMeTests" */;
+			buildPhases = (
+				49CCF593F9552EE5393DC7E1 /* [CP] Check Pods Manifest.lock */,
+				A9C33AC523B44F74000DF09F /* Sources */,
+				A9C33AC623B44F74000DF09F /* Frameworks */,
+				A9C33AC723B44F74000DF09F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9C33ACB23B44F74000DF09F /* PBXTargetDependency */,
+			);
+			name = FindRestaurantsNearMeTests;
+			productName = FindRestaurantsNearMeTests;
+			productReference = A9C33AC923B44F74000DF09F /* FindRestaurantsNearMeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A9C33AD323B44F74000DF09F /* FindRestaurantsNearMeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9C33AE323B44F74000DF09F /* Build configuration list for PBXNativeTarget "FindRestaurantsNearMeUITests" */;
+			buildPhases = (
+				E2B4DCB5A712E79ABC621E5D /* [CP] Check Pods Manifest.lock */,
+				A9C33AD023B44F74000DF09F /* Sources */,
+				A9C33AD123B44F74000DF09F /* Frameworks */,
+				A9C33AD223B44F74000DF09F /* Resources */,
+				DFA27635EF2694AE0E513964 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9C33AD623B44F74000DF09F /* PBXTargetDependency */,
+			);
+			name = FindRestaurantsNearMeUITests;
+			productName = FindRestaurantsNearMeUITests;
+			productReference = A9C33AD423B44F74000DF09F /* FindRestaurantsNearMeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A9C33AA623B44F72000DF09F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = BunSoku;
+				TargetAttributes = {
+					A9C33AAD23B44F72000DF09F = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					A9C33AC823B44F74000DF09F = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = A9C33AAD23B44F72000DF09F;
+					};
+					A9C33AD323B44F74000DF09F = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = A9C33AAD23B44F72000DF09F;
+					};
+				};
+			};
+			buildConfigurationList = A9C33AA923B44F72000DF09F /* Build configuration list for PBXProject "FindRestaurantsNearMe" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A9C33AA523B44F72000DF09F;
+			productRefGroup = A9C33AAF23B44F72000DF09F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A9C33AAD23B44F72000DF09F /* FindRestaurantsNearMe */,
+				A9C33AC823B44F74000DF09F /* FindRestaurantsNearMeTests */,
+				A9C33AD323B44F74000DF09F /* FindRestaurantsNearMeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A9C33AAC23B44F72000DF09F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9C33AC123B44F74000DF09F /* LaunchScreen.storyboard in Resources */,
+				A9C33ABE23B44F74000DF09F /* Assets.xcassets in Resources */,
+				A9C33ABC23B44F72000DF09F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9C33AC723B44F74000DF09F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9C33AD223B44F74000DF09F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0665619A69C84BF44E83DC31 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindRestaurantsNearMe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49CCF593F9552EE5393DC7E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindRestaurantsNearMeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFA27635EF2694AE0E513964 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindRestaurantsNearMe-FindRestaurantsNearMeUITests/Pods-FindRestaurantsNearMe-FindRestaurantsNearMeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindRestaurantsNearMe-FindRestaurantsNearMeUITests/Pods-FindRestaurantsNearMe-FindRestaurantsNearMeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindRestaurantsNearMe-FindRestaurantsNearMeUITests/Pods-FindRestaurantsNearMe-FindRestaurantsNearMeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2B4DCB5A712E79ABC621E5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindRestaurantsNearMe-FindRestaurantsNearMeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5110E266A36CFD4F05EB3E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindRestaurantsNearMe/Pods-FindRestaurantsNearMe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindRestaurantsNearMe/Pods-FindRestaurantsNearMe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindRestaurantsNearMe/Pods-FindRestaurantsNearMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A9C33AAA23B44F72000DF09F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A99F029923B5FB2000FCCD30 /* LocationDetector.m in Sources */,
+				A9DB25BB23B5EAD300A8303E /* RestaurantListViewController.m in Sources */,
+				A98349A123B5E921007FB634 /* LoginViewController.m in Sources */,
+				A983499F23B5E831007FB634 /* RestaurantDataStore.m in Sources */,
+				A9C33AB323B44F72000DF09F /* AppDelegate.m in Sources */,
+				A9C33AC423B44F74000DF09F /* main.m in Sources */,
+				A983499C23B5E802007FB634 /* RestaurantsDataRepository.m in Sources */,
+				A9C33AB623B44F72000DF09F /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9C33AC523B44F74000DF09F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9C33ACE23B44F74000DF09F /* FindRestaurantsNearMeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9C33AD023B44F74000DF09F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9C33AD923B44F74000DF09F /* FindRestaurantsNearMeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A9C33ACB23B44F74000DF09F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9C33AAD23B44F72000DF09F /* FindRestaurantsNearMe */;
+			targetProxy = A9C33ACA23B44F74000DF09F /* PBXContainerItemProxy */;
+		};
+		A9C33AD623B44F74000DF09F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9C33AAD23B44F72000DF09F /* FindRestaurantsNearMe */;
+			targetProxy = A9C33AD523B44F74000DF09F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A9C33ABA23B44F72000DF09F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9C33ABB23B44F72000DF09F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A9C33ABF23B44F74000DF09F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9C33AC023B44F74000DF09F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A9C33ADB23B44F74000DF09F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A9C33ADC23B44F74000DF09F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A9C33ADE23B44F74000DF09F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0A6C593A27CAFB7130BF812 /* Pods-FindRestaurantsNearMe.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FindRestaurantsNearMe/FindRestaurantsNearMe.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3EU39N7T34;
+				GCC_NO_COMMON_BLOCKS = NO;
+				INFOPLIST_FILE = FindRestaurantsNearMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = findrestaurants.FindRestaurantsNearMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A9C33ADF23B44F74000DF09F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D12987FAC93E6BEC0D8F52B0 /* Pods-FindRestaurantsNearMe.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FindRestaurantsNearMe/FindRestaurantsNearMe.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3EU39N7T34;
+				GCC_NO_COMMON_BLOCKS = NO;
+				INFOPLIST_FILE = FindRestaurantsNearMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = findrestaurants.FindRestaurantsNearMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A9C33AE123B44F74000DF09F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11801753892A5C1987C1EB44 /* Pods-FindRestaurantsNearMeTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FindRestaurantsNearMeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = findrestaurants.FindRestaurantsNearMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindRestaurantsNearMe.app/FindRestaurantsNearMe";
+			};
+			name = Debug;
+		};
+		A9C33AE223B44F74000DF09F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7F49AC090BD45249E03B308 /* Pods-FindRestaurantsNearMeTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FindRestaurantsNearMeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = findrestaurants.FindRestaurantsNearMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindRestaurantsNearMe.app/FindRestaurantsNearMe";
+			};
+			name = Release;
+		};
+		A9C33AE423B44F74000DF09F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96C817D05573560986E2BAD7 /* Pods-FindRestaurantsNearMe-FindRestaurantsNearMeUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FindRestaurantsNearMeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = findrestaurants.FindRestaurantsNearMeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FindRestaurantsNearMe;
+			};
+			name = Debug;
+		};
+		A9C33AE523B44F74000DF09F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F8D8C9364DC595EEE38A25B /* Pods-FindRestaurantsNearMe-FindRestaurantsNearMeUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FindRestaurantsNearMeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = findrestaurants.FindRestaurantsNearMeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FindRestaurantsNearMe;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9C33AA923B44F72000DF09F /* Build configuration list for PBXProject "FindRestaurantsNearMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9C33ADB23B44F74000DF09F /* Debug */,
+				A9C33ADC23B44F74000DF09F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9C33ADD23B44F74000DF09F /* Build configuration list for PBXNativeTarget "FindRestaurantsNearMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9C33ADE23B44F74000DF09F /* Debug */,
+				A9C33ADF23B44F74000DF09F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9C33AE023B44F74000DF09F /* Build configuration list for PBXNativeTarget "FindRestaurantsNearMeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9C33AE123B44F74000DF09F /* Debug */,
+				A9C33AE223B44F74000DF09F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9C33AE323B44F74000DF09F /* Build configuration list for PBXNativeTarget "FindRestaurantsNearMeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9C33AE423B44F74000DF09F /* Debug */,
+				A9C33AE523B44F74000DF09F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A9C33AA623B44F72000DF09F /* Project object */;
+}
